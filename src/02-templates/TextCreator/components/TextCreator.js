@@ -6,8 +6,12 @@ import {
   selectTravelList,
 } from "../../../redux/slices/myTravelListSlice";
 import { createTravelWithId } from "../utils/createTravelWithId";
+import { useParams } from "react-router-dom";
 
 function TextCreator() {
+  const id = useParams();
+  console.log(id);
+
   const [textState, setTextState] = useState("");
   const [titleState, setTitleState] = useState("");
   const myTravelList = useSelector(selectTravelList);
@@ -15,7 +19,9 @@ function TextCreator() {
   const textAreaRef = useRef(null);
 
   const handleAddTravel = () =>
-    dispatch(addTravel(createTravelWithId({ titleState, textState })));
+    dispatch(
+      addTravel(createTravelWithId({ title: titleState, text: textState }))
+    );
 
   const textareaInputHandler = () => {
     textAreaRef.current.style.height = "10px";

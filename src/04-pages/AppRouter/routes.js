@@ -1,14 +1,14 @@
 import {
   MAIN_PAGE,
   TRAVEL_DIARY_PAGE,
-  ADD_TRAVEL,
+  EDIT_TRAVEL,
   PLANNED_TRAVEL_PAGE,
   DRAFT_PAGE,
 } from "../../utils/consts";
 import MainPage from "../MainPage/MainPage";
 import SingleTravelPage from "../SingleTravelPage/SingleTravelPage";
 import TravelDiaryPage from "../TravelDiaryPage/TravelDiaryPage";
-import AddTravelPage from "../AddTravelPage/AddTravelPage";
+import EditTravelPage from "../EditTravelPage/EditTravelPage";
 import PlannedTravelPage from "../PlannedTravelPage/PlannedTravelPage";
 import DraftPage from "../DrafrPage/DraftPage";
 
@@ -26,8 +26,12 @@ export const routes = [
     Component: DraftPage,
   },
   {
-    path: DRAFT_PAGE + ADD_TRAVEL,
-    Component: AddTravelPage,
+    path: DRAFT_PAGE + EDIT_TRAVEL,
+    Component: EditTravelPage,
+  },
+  {
+    path: DRAFT_PAGE + EDIT_TRAVEL + `/:id`,
+    Component: EditTravelPage,
   },
   {
     path: TRAVEL_DIARY_PAGE + `/:id`,
