@@ -1,0 +1,33 @@
+.textarea {
+  resize: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  width: 100%;
+}
+
+.textTitle {
+  font-family: "Montserrat", sans-serif;
+  height: 35px;
+  resize: none;
+  width: 350px;
+  border: none;
+  border: 1px black solid;
+  font-size: 25px;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.textTitle::placeholder {
+  font-size: 16px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px;
+  width: 80%;
+}
