@@ -1,11 +1,13 @@
-import React from "react";
 import styles from "./MainLayout.module.css";
-import TextCreator from "../../../02-templates/TextCreator/components/TextCreator";
+import TravelGeneralInfo from "./TravelGeneralInfo";
+
+import ChaptersList from "./ChaptersList";
 
 function MainLayout() {
   return (
     <main className={styles.main_page}>
-      <TextCreator />
+      <TravelGeneralInfo />
+      <ChaptersList />
     </main>
   );
 }

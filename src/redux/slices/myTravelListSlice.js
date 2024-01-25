@@ -9,10 +9,14 @@ const myTravelListSlice = createSlice({
     addTravel: (state, action) => {
       state.push(action.payload);
     },
+    changeTravel: (state, action) => {
+      const travel = state.find((el) => el.id === action.payload.id);
+      travel.title = action.payload.title;
+    },
   },
 });
 
-export const { addTravel } = myTravelListSlice.actions;
+export const { addTravel, changeTravel } = myTravelListSlice.actions;
 
 export const selectTravelList = (state) => state.myTravelList;
 

@@ -14,7 +14,7 @@ function DraftList() {
       <Link to={DRAFT_PAGE + EDIT_TRAVEL}>Добавить новое путешествие</Link>
       <div className={styles.draft_list}>
         {draftTravels.map((travel) => {
-          return <SingleTravelInfo travel={travel} />;
+          return <SingleTravelInfo key={travel.id} travel={travel} />;
         })}
       </div>
     </div>
