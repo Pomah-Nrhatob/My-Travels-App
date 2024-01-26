@@ -26,7 +26,7 @@ function ChaptersList() {
   };
 
   return (
-    <div>
+    <>
       {chaptersOfTravel.map((chapter) => {
         return <TextCreator key={chapter.id} chapter={chapter} />;
       })}
@@ -37,7 +37,7 @@ function ChaptersList() {
       ) : (
         ""
       )}
-    </div>
+    </>
   );
 }
 

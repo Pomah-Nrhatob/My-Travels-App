@@ -6,7 +6,8 @@
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   width: 100%;
-  white-space: pre-line;
+  min-height: 250px;
+  white-space: pre-wrap;
 }
 
 .textTitle {
@@ -19,7 +20,7 @@
   font-size: 25px;
   border-radius: 3px;
   padding: 15px;
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
 
 .textTitle::placeholder {
@@ -32,4 +33,5 @@
   gap: 20px;
   margin-top: 20px;
   width: 80%;
+  white-space: pre-wrap;
 }

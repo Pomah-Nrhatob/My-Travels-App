@@ -49,6 +49,7 @@ function TextCreator({ chapter }) {
         className={styles.textarea}
       />
       <hr />
+      <div>{textState}</div>
     </div>
   );
 }
