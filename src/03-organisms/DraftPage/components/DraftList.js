@@ -5,9 +5,11 @@ import { useSelector } from "react-redux";
 import { selectTravelList } from "../../../redux/slices/myTravelListSlice";
 import SingleTravelInfo from "./SingleTravelInfo";
 import styles from "./DraftList.module.css";
+import { selectChapters } from "../../../redux/slices/chaptersOfTravelListSlice";
 
 function DraftList() {
   const draftTravels = useSelector(selectTravelList);
+  const chapters = useSelector(selectChapters);
 
   return (
     <div className={styles.draft_mainDiv}>
