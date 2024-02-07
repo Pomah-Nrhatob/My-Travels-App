@@ -18,12 +18,8 @@ function ChaptersList() {
 
   const handleAddNewChapter = () => {
     const createChapter = createTravelWithId({
-<<<<<<< HEAD
       title: '',
       text: '',
-=======
-      title: "",
->>>>>>> f3d89fec9c3f37798053ccea0b9f818aeb2956b1
       travelId: id.id,
     })
     dispatch(addChapter(createChapter))
