@@ -1,3 +1,7 @@
+.main_Page {
+  display: flex;
+}
+
 .textarea {
   resize: none;
   border: 1px solid black;
@@ -12,26 +16,55 @@
 
 .textTitle {
   font-family: "Montserrat", sans-serif;
-  height: 35px;
+  height: 20px;
+  width: 60vw;
   resize: none;
-  width: 350px;
-  border: none;
-  border: 1px black solid;
-  font-size: 25px;
-  border-radius: 3px;
-  padding: 15px;
-  white-space: pre-wrap;
+  border: 1px gray solid;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 3px;
+  margin-right: 10px;
 }
 
 .textTitle::placeholder {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   margin-top: 20px;
   width: 80%;
   white-space: pre-wrap;
+  border: 2px solid rgba(128, 128, 128, 0.681);
+  border-radius: 5px;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.main_active {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 80%;
+  white-space: pre-wrap;
+  border: 2px solid rgba(228, 23, 23, 0.681);
+  border-radius: 5px;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.chapter_info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: rgb(241, 241, 243);
+}
+
+.chapter_info > h3 {
+  font-family: "Montserrat", sans-serif;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 500;
 }

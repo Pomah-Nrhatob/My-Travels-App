@@ -1,7 +1,5 @@
-import React from "react";
-
 function TravelDiaryPage() {
-  return <div>TravelDiaryPage</div>;
+  return <div>44r</div>;
 }
 
 export default TravelDiaryPage;
