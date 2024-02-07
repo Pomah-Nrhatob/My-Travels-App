@@ -1,37 +1,37 @@
-import React, { useRef, useState } from "react";
-import styles from "./TextCreator.module.css";
-import { useDispatch } from "react-redux";
-import { changeChapter } from "../../../redux/slices/chaptersOfTravelListSlice";
+import React, { useRef, useState } from 'react'
+import styles from './TextCreator.module.css'
+import { useDispatch } from 'react-redux'
+import { changeChapter } from '../../../redux/slices/chaptersOfTravelListSlice'
 
 function TextCreator({ chapter }) {
-  const [titleState, setTitleState] = useState(chapter.title);
-  const [textState, setTextState] = useState(chapter.text);
-  const dispatch = useDispatch();
-  const textAreaRef = useRef(null);
+  const [titleState, setTitleState] = useState(chapter.title)
+  const [textState, setTextState] = useState(chapter.text)
+  const dispatch = useDispatch()
+  const textAreaRef = useRef(null)
 
   const textareaInputHandler = () => {
-    textAreaRef.current.style.height = "10px";
+    textAreaRef.current.style.height = '10px'
     textAreaRef.current.style.height = `${Math.min(
       textAreaRef.current.scrollHeight,
       10000
-    )}px`;
-  };
+    )}px`
+  }
 
   const handleSaveTitle = () => {
-    dispatch(changeChapter({ ...chapter, title: titleState }));
-  };
+    dispatch(changeChapter({ ...chapter, title: titleState }))
+  }
   const handleSaveText = () => {
-    dispatch(changeChapter({ ...chapter, text: textState }));
-  };
+    dispatch(changeChapter({ ...chapter, text: textState }))
+  }
 
   return (
     <div className={styles.main}>
       <textarea
         onChange={(e) => {
-          setTitleState(e.target.value);
+          setTitleState(e.target.value)
         }}
         onBlur={() => {
-          handleSaveTitle();
+          handleSaveTitle()
         }}
         value={titleState}
         placeholder="Введите название главы..."
@@ -42,7 +42,7 @@ function TextCreator({ chapter }) {
         onInput={textareaInputHandler}
         ref={textAreaRef}
         onChange={(e) => {
-          setTextState(e.target.value);
+          setTextState(e.target.value)
         }}
         onBlur={handleSaveText}
         value={textState}
@@ -51,7 +51,7 @@ function TextCreator({ chapter }) {
       <hr />
       <div>{textState}</div>
     </div>
-  );
+  )
 }
 
-export default TextCreator;
+export default TextCreator

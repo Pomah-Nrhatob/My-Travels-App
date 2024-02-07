@@ -4,13 +4,13 @@ import {
   EDIT_TRAVEL,
   PLANNED_TRAVEL_PAGE,
   DRAFT_PAGE,
-} from "../../utils/consts";
-import MainPage from "../MainPage/MainPage";
-import SingleTravelPage from "../SingleTravelPage/SingleTravelPage";
-import TravelDiaryPage from "../TravelDiaryPage/TravelDiaryPage";
-import EditTravelPage from "../EditTravelPage/EditTravelPage";
-import PlannedTravelPage from "../PlannedTravelPage/PlannedTravelPage";
-import DraftPage from "../DrafrPage/DraftPage";
+} from '../../utils/consts'
+import MainPage from '../MainPage/MainPage'
+import SingleTravelPage from '../SingleTravelPage/SingleTravelPage'
+import TravelDiaryPage from '../TravelDiaryPage/TravelDiaryPage'
+import EditTravelPage from '../EditTravelPage/EditTravelPage'
+import PlannedTravelPage from '../PlannedTravelPage/PlannedTravelPage'
+import DraftPage from '../DrafrPage/DraftPage'
 
 export const routes = [
   {
@@ -41,4 +41,4 @@ export const routes = [
     path: PLANNED_TRAVEL_PAGE,
     Component: PlannedTravelPage,
   },
-];
+]

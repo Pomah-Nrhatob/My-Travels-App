@@ -1,0 +1,14 @@
+.container {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.close_btn {
+  text-align: center;
+  margin: 130px 0 0 0px;
+  background-color: #ed7373;
+  cursor: pointer;
+  width: 200px;
+  height: 20px;
+}
